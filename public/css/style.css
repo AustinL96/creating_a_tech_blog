@@ -1,0 +1,115 @@
+/* UNIVERSAL SELECTORS */
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.pageBody {
+    background-color: darkcyan;
+}
+
+header {
+    background-color: darkslategray;
+    color: cyan;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: .2em solid black;
+    padding: .1em 3em;
+}
+
+header h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    -webkit-text-stroke: .05em black;
+}
+
+nav a{
+    text-decoration: none;
+    color: cyan;
+    padding: .1em 3em;
+    
+}
+/* INDEX/HOME PAGE STYLING */
+.greeting {
+    font-size: large;
+    color: cyan;
+    display: block;
+    text-align: center;
+    margin: 1em 2em;
+}
+
+.greeting h2 {
+    font-size: 3em;
+    -webkit-text-stroke: .05em black;
+    
+}
+
+.blog_post {
+    background-color: darkcyan;
+    display: grid;
+    grid-template-rows:auto;
+    border: .2em solid black;
+    margin: 1em 7em;
+    
+}
+.blog_post p {
+    padding: .1em .5em;
+}
+
+.blog_header {
+    background-color:darkslategray;
+    color: darkcyan;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: .2em solid black;
+    padding: .5em;
+}
+
+/* DASHBOARD PAGE STYLING */
+.newPost {
+    color: cyan;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    -webkit-text-stroke: .1em black;
+}
+.newPost button {
+    font-size: 1em;
+    margin: 1.5em .5em;
+    padding: .1em .5em;
+}
+
+/* LOGIN PAGE STYLING */
+.memberBox {
+    background-color: darkcyan;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: .2em solid black;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+.login {
+    border-left: .2em solid black;
+}
+
+.signUp,
+.login {
+    margin: 0px;
+}
+
+.signUpHeader,
+.loginHeader {
+    background-color: darkslategray;
+    color: darkcyan;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-bottom: .2em solid black;
+}
+.signUpForm button{
+    margin: 10px;
+}
+.loginForm button{
+    margin: 10px;
+}

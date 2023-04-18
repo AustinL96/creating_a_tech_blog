@@ -1,0 +1,17 @@
+{{#if loggedIn}}
+    <div class="greeting">
+        <h2>Welcome back {{userName}}!</h2>
+        <p>Join the discussion below</p>
+    </div>
+    {{else}}
+{{/if}}
+
+{{#each blog}}
+    <div class="blog_post">
+        <div class="blog_header">
+            <h3>{{this.title}}</h3>
+            <h4>Posted at {{this.createdAt}}</h4>
+        </div>
+        <p>{{this.content}}</p>
+    </div>
+{{/each}}
