@@ -1,4 +1,4 @@
-const Blogs = require('../models/Blogs');
+const { Blogs, User } = require('../models/index');
 const db = require('./connection');
 
 db.sync({ force: true }).then(() => {

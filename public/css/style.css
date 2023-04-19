@@ -82,15 +82,10 @@ nav a{
 /* LOGIN PAGE STYLING */
 .memberBox {
     background-color: darkcyan;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     border: .2em solid black;
     width: 60%;
     margin: 0 auto;
     text-align: center;
-}
-.login {
-    border-left: .2em solid black;
 }
 
 .signUp,

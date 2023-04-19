@@ -1,0 +1,29 @@
+<header>
+    <h1>The Ultimate Tech Blog</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/dashboard">Dashboard</a>
+      <a href="/login">Login</a>
+      <a href="/signup">Sign Up</a>
+    </nav>
+  </header>
+
+
+<div class="greeting">
+    <h2>Welcome to the Tech Blog</h2>
+</div>
+
+<div class="memberBox">
+    <div class="login">
+        <div class="loginHeader">
+            <h3>Already A Member?<br>Login Below</h3>
+        </div>
+        <div class="loginForm">
+            <form action="/auth/login" method="POST">
+                <input name="email" type="email" placeholder="Enter your username">
+                <input name="password" type="password" placeholder="Enter your password">
+                <button>Sign In</button>
+            </form>
+        </div>
+    </div>
+</div>

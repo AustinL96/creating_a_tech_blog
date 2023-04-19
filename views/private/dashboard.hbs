@@ -1,0 +1,31 @@
+<header>
+    <h1>The Ultimate Tech Blog</h1>
+    <nav>
+        <a href="/auth/logout">Log Out</a>
+        <a href="/">Home</a>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/login">Login</a>
+        <a href="/signup">Sign Up</a>
+    </nav>
+</header>
+
+
+<div class="greeting">
+    <h2>Dashboard</h2>
+    <p>Welcome back, see your previously made discussions below</p>
+</div>
+
+<div class="newPost">
+    <h2>Create A New Blog Post</h2>
+    <button>+</button>
+</div>
+
+{{#each blog}}
+<div class="blog_post">
+    <div class="blog_header">
+        <h3>{{this.title}}</h3>
+        <h4>Posted at {{this.createdAt}}</h4>
+    </div>
+    <p>{{this.content}}</p>
+</div>
+{{/each}}
