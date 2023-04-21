@@ -5,15 +5,25 @@
     </div>
     {{else}}
 {{/if}} --}}
-<header>
-    <h1>The Ultimate Tech Blog</h1>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/dashboard">Dashboard</a>
-      <a href="/login">Login</a>
-      <a href="/signup">Sign Up</a>
-    </nav>
-  </header>
+
+{{#if loggedIn}}
+    <header>
+        <h1>The Ultimate Tech Blog</h1>
+        <nav>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/auth/logout">Log Out</a>
+        </nav>
+    </header>
+    {{else}}
+    <header>
+        <h1>The Ultimate Tech Blog</h1>
+        <nav>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/login">Login</a>
+        <a href="/signup">Sign Up</a>
+        </nav>
+    </header>
+{{/if}}
 
 {{#each blog}}
     <div class="blog_post">

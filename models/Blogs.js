@@ -4,6 +4,12 @@ const db = require('../config/connection');
 class Blogs extends Model { }
 
 Blogs.init({
+  id: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    primaryKey: true,
+    autoIncrement: true
+  },
   poster_id: {
     type: DataTypes.INTEGER,
     allowNull: false,
