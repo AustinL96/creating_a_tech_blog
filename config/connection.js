@@ -1,7 +1,8 @@
 const { Sequelize } = require('sequelize');
 require('dotenv').config();
+const isProduction = process.env.PORT;
 
-const connection = new Sequelize(
+const connection = isProduction ? process.env.DB_CONNECTION_STRING : new Sequelize(
   process.env.DB_NAME,
   process.env.DB_USERNAME,
   process.env.DB_PASSWORD,
