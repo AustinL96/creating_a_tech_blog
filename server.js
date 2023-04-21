@@ -21,7 +21,9 @@ app.set('view engine', 'hbs');
 app.set('views', './views');
 
 app.use(session({
-  secret: process.env.SESSION_SECRET,
+  //heroku is giving me errors with this
+  secret: 'mySecretKey',
+  // secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: false
 }))
