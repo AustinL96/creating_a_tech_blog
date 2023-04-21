@@ -1,13 +1,21 @@
+{{#if isLoggedIn}}
 <header>
     <h1>The Ultimate Tech Blog</h1>
     <nav>
-        <a href="/auth/logout">Log Out</a>
         <a href="/">Home</a>
-        <a href="/dashboard">Dashboard</a>
+        <a href="/auth/logout">Log Out</a>
+    </nav>
+</header>
+{{else}}
+<header>
+    <h1>The Ultimate Tech Blog</h1>
+    <nav>
+        <a href="/">Home</a>
         <a href="/login">Login</a>
         <a href="/signup">Sign Up</a>
     </nav>
 </header>
+{{/if}}
 
 
 <div class="greeting">
@@ -17,7 +25,7 @@
 
 <div class="newPost">
     <h2>Create A New Blog Post</h2>
-    <button>+</button>
+    <button id="newPost">+</button>
 </div>
 
 {{#each blog}}
@@ -29,3 +37,5 @@
     <p>{{this.content}}</p>
 </div>
 {{/each}}
+
+<script src="js/script.js"></script>

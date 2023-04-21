@@ -1,7 +1,8 @@
 const router = require('express').Router();
-const User = require('../models/User');
+const { Blogs, User }= require('../models/index');
 const bcrypt = require('bcrypt');
 
+//***LOGIN ROUTES */
 router.post('/auth/login', async (req, res) => {
   // user_data = email and password
   const user_data = req.body;
@@ -24,7 +25,8 @@ router.post('/auth/login', async (req, res) => {
   req.session.user_id = user.id;
   res.redirect('/dashboard');
 });
-  
+
+//*** SIGNUP ROUTES */
 router.post('/auth/signup', async (req, res) => {
   // users email and password
   const user_data = req.body;
@@ -39,11 +41,32 @@ router.post('/auth/signup', async (req, res) => {
   }
 });
 
-//To log out
+//*** TO LOG OUT */
 router.get('/auth/logout', (req, res) => {
   req.session.destroy();
 
   res.redirect('/');
 })
+
+//***CREATE NEW BLOGS */
+router.post('/dashboard/newpost', async (req, res) => {
+  const { titleText, bodyText } = req.body;
+
+  try {
+    const poster_id = req.session.user_id
+
+    const newBlog = await Blogs.create({
+      poster_id: poster_id,
+      title: titleText,
+      content: bodyText
+    });
+    console.log(`New blog added: ${newBlog.title}`);
+    res.redirect('/');
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Server Error');
+  }
+});
+
 
 module.exports = router;

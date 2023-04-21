@@ -78,6 +78,41 @@ nav a{
     margin: 1.5em .5em;
     padding: .1em .5em;
 }
+/* Styles the new post stuff on /dashboard */
+.newPostBox {
+    background-color: darkslategray;
+    display: grid;
+    grid-template-rows:auto;
+    width: 40%;
+    border: .2em solid black;
+    margin: 0 auto;
+    place-items: center;
+}
+
+.newPostTitle {
+    background-color: darkcyan;
+    color: black;
+    width: 70%;
+    border: .2em solid black;
+    margin: 1rem 9rem 2rem 9rem;
+}
+.newPostTitle::placeholder {
+    color: black;
+}
+.newPostText {
+    background-color: darkcyan;
+    color: black;
+    border: .2em solid black;
+    resize: vertical;
+    width: 90%;
+    margin: 0px 2em 2em 2em;
+}
+.newPostText::placeholder {
+    color: black;
+}
+.newPostSubmit {
+    width: 20%;
+}
 
 /* LOGIN PAGE STYLING */
 .memberBox {
@@ -102,9 +137,7 @@ nav a{
     text-align: center;
     border-bottom: .2em solid black;
 }
-.signUpForm button{
-    margin: 10px;
-}
-.loginForm button{
+.signUpForm button,
+.loginForm button {
     margin: 10px;
 }
