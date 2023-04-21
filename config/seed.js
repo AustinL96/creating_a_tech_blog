@@ -1,5 +1,8 @@
 const { Blogs, User } = require('../models/index');
+const { Sequelize } = require('sequelize');
 const db = require('./connection');
+
+// const db = new Sequelize(process.env.DB_CONNECTION_STRING)
 
 db.sync({ force: true }).then(() => {
   Blogs.bulkCreate([
